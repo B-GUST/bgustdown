@@ -1,13 +1,13 @@
 [package]
 name = "bgustdown"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["B-GUST <augustbenitogroup@gmail.com>"]
 license = "MIT"
 description = "High-performance document-to-markdown & NLP dataset engine in Rust with NAPI-RS bindings."
 repository = "https://github.com/B-GUST/bgustdown"
 homepage = "https://bgustdown.lat"
-documentation = "https://docs.rs/bgustdown"
+documentation = "https://bgustdown.lat"
 keywords = ["markdown", "nlp", "ocr", "arrow", "converter"]
 categories = ["text-processing", "parser-implementations"]
 
