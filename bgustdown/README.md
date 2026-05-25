@@ -6,70 +6,61 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/language-rust-orange.svg" alt="Language">
-  <img src="https://img.shields.io/badge/platform-node.js-green.svg" alt="Platform">
-  <img src="https://img.shields.io/badge/license-MIT-black.svg" alt="License">
+  <a href="https://www.npmjs.com/package/bgustdown"><img src="https://img.shields.io/npm/v/bgustdown.svg?style=flat-square" alt="NPM Version"></a>
+  <img src="https://img.shields.io/badge/language-rust-orange.svg?style=flat-square" alt="Language">
+  <img src="https://img.shields.io/badge/license-MIT-black.svg?style=flat-square" alt="License">
+  <a href="https://bgustdown.lat"><img src="https://img.shields.io/badge/docs-website-blue.svg?style=flat-square" alt="Docs"></a>
 </p>
 
 ---
 
 ## 💡 The Vision
 
-**bgustdown** is not just another document converter. It is a data engineering powerhouse built from the ground up in **Rust** to eliminate the performance bottlenecks in AI data pipelines. Whether you are building a RAG system or fine-tuning models like BERT/BETO, bgustdown provides the speed, semantic integrity, and structural precision required for production-grade AI applications.
+**bgustdown** is a high-performance data engineering tool built in **Rust**. It eliminates the performance bottlenecks in AI data pipelines by providing ultra-fast document conversion, semantic cleaning, and structural precision.
+
+## 🧠 AI Skill Integration
+
+**bgustdown** is designed to be used by AI Agents (Gemini, Claude, GPT) as a native tool to interact with local files.
+
+### How to use as a Skill
+If you are using an AI agent, you can simply point it to this repository or install the package via NPM. The agent can then execute:
+
+```bash
+# To convert a document to Markdown
+npx bgustdown convert ./my-document.pdf
+
+# To prepare a dataset for NLP fine-tuning (JSON output)
+npx bgustdown prepare ./legal-text.docx
+```
+
+## 🛠 Command Reference (CLI)
+
+| Command | Action | Output |
+| :--- | :--- | :--- |
+| `convert <path>` | Extracts text & tables from file. | Clean Markdown String |
+| `prepare <path>` | Segments text into training sentences. | JSON Array of sentences |
 
 ## ✨ Key Features
 
-- **⚡ Blazing Fast:** Powered by Rust and Tokio for real parallel processing. Process massive spreadsheets or complex PDFs in ~15ms.
-- **📊 Industrial Data Handling:** Native **Apache Arrow** integration for tabular data (XLSX, CSV), ensuring memory efficiency and scalability.
-- **🧠 Semantic Intelligence:** Built-in semantic cleaning to remove headers, footers, and noise. Optimized for **BERT/BETO** fine-tuning with context-aware sentence segmentation.
-- **📦 Zero-Dependency Runtime:** Pre-compiled native binaries via **NAPI-RS**. No Python, no complex system dependencies. Just `npm install`.
-
-## 🛠 Supported Formats
-
-| Category | Formats | Engine |
-| :--- | :--- | :--- |
-| **Documents** | `.docx`, `.odt` | Native Rust XML Parser |
-| **Data** | `.xlsx`, `.xls`, `.csv`, `.ods` | Calamine + Apache Arrow |
-| **Rigid** | `.pdf` | pdf-extract |
-| **AI Output** | `.md`, `.jsonl` | Semantic Dataset Builder |
+- **⚡ Blazing Fast:** Parallel processing without Python's GIL.
+- **📊 Apache Arrow:** Industrial-grade tabular data handling.
+- **🧠 Semantic Cleaning:** Automatic removal of page numbers, headers, and footers.
+- **📦 Zero-Dependency:** Pre-compiled binaries. No Python required.
 
 ## 🚀 Quick Start
 
 ### Installation
-
 ```bash
 npm install bgustdown
 ```
 
-### Basic Usage (Markdown Conversion)
-
+### Library Usage
 ```javascript
 const { Bgustdown } = require('bgustdown');
+const client = new Bgustdown();
 
-async function run() {
-  const client = new Bgustdown();
-  const markdown = await client.convert('./report.pdf');
-  console.log(markdown);
-}
-
-run();
-```
-
-### Professional NLP Prep (Sentence Segmentation)
-
-```javascript
-const { Bgustdown } = require('bgustdown');
-
-async function prepare() {
-  const client = new Bgustdown();
-  const markdown = await client.convert('./legal_code.docx');
-  
-  // Clean noise and segment for BERT training
-  const sentences = client.prepareTrainingData(markdown, 'legal', 'public_records');
-  console.log(`Generated ${sentences.length} high-quality training pairs.`);
-}
-
-prepare();
+// Convert any supported file
+const md = await client.convert('file.docx');
 ```
 
 ## 🏗 Architecture
@@ -87,17 +78,12 @@ graph TD
 
 ## 📜 Attribution & Ethics
 
-This project is inspired by the conceptual design of Microsoft's **MarkItDown**. We have ported the philosophy to Rust to achieve a new level of performance and specific specialization for NLP dataset preparation.
+This project is inspired by the conceptual design of Microsoft's **MarkItDown**. Ported to Rust for extreme performance.
 
-- **Original Project:** [MarkItDown](https://github.com/microsoft/markitdown) by Microsoft Corporation.
+- **Original Project:** [MarkItDown](https://github.com/microsoft/markitdown) by Microsoft.
 - **License:** MIT
 
-## 🤝 Contributing
-
-Contributions are welcome! If you want to improve a parser or add a new format, feel free to open a PR.
-
 ---
-
 <p align="center">
-  Built with ❤️ for the open-source community by <b>B-GUST</b>.
+  Built for the open-source community by <b>B-GUST</b>. Visit <a href="https://bgustdown.lat">bgustdown.lat</a> for more.
 </p>
