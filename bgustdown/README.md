@@ -16,20 +16,32 @@
 
 ## 💡 The Vision
 
-**bgustdown** is a high-performance data engineering tool built in **Rust**. It eliminates the performance bottlenecks in AI data pipelines by providing ultra-fast document conversion, semantic cleaning, and structural precision.
+**bgustdown** is a high-performance data engineering tool built in **Rust**. It is designed with a dual purpose:
+1. **As a fast converter:** A reliable layer to transform messy documents into clean text before feeding them into an LLM.
+2. **As a semantic engine:** A specialized tool to create training-ready datasets with structural integrity and context-aware segmentation.
+
+*Note: While using it only for conversion is highly effective, its true potential lies in its ability to prepare high-quality data for NLP fine-tuning.*
 
 ## 🧠 AI Skill Integration
 
-**bgustdown** is designed to be used by AI Agents (Gemini, Claude, GPT) as a native tool to interact with local files.
+**bgustdown** is an **AI-native skill**. It can be installed as a local tool for AI agents (Gemini, Claude, GPT) to interact with local documents.
+
+### How to Install as a Skill
+1. **Via NPM (Global):**
+   ```bash
+   npm install -g bgustdown
+   ```
+2. **Manual (Agent Directory):**
+   Clone this repository into your agent's skill folder (e.g., `.agents/skills/bgustdown`).
 
 ### How to use as a Skill
-If you are using an AI agent, you can simply point it to this repository or install the package via NPM. The agent can then execute:
+Agents can execute the following commands via terminal:
 
 ```bash
 # To convert a document to Markdown
 npx bgustdown convert ./my-document.pdf
 
-# To prepare a dataset for NLP fine-tuning (JSON output)
+# To prepare a dataset for NLP (Clean segmentation & JSON output)
 npx bgustdown prepare ./legal-text.docx
 ```
 
@@ -42,10 +54,10 @@ npx bgustdown prepare ./legal-text.docx
 
 ## ✨ Key Features
 
-- **⚡ Blazing Fast:** Parallel processing without Python's GIL.
-- **📊 Apache Arrow:** Industrial-grade tabular data handling.
-- **🧠 Semantic Cleaning:** Automatic removal of page numbers, headers, and footers.
-- **📦 Zero-Dependency:** Pre-compiled binaries. No Python required.
+- **⚡ Blazing Fast:** Powered by **Rust** and Tokio for real parallel processing.
+- **📊 Apache Arrow:** Industrial-grade tabular data handling for XLSX and CSV.
+- **🧠 Semantic Intelligence:** Built-in cleaning of noise (headers, footers, page numbers).
+- **📦 Zero-Dependency Runtime:** Pre-compiled native binaries via **NAPI-RS**.
 
 ## 🚀 Quick Start
 
@@ -76,11 +88,11 @@ graph TD
     E --> G[NLP Dataset JSONL]
 ```
 
-## 📜 Attribution & Ethics
+## 📜 Attribution & Technical Stack
 
-This project is inspired by the conceptual design of Microsoft's **MarkItDown**. Ported to Rust for extreme performance.
-
-- **Original Project:** [MarkItDown](https://github.com/microsoft/markitdown) by Microsoft.
+- **Conceptual Inspiration:** Based on the design of Microsoft's **MarkItDown**.
+- **Engine:** Built from scratch in **Rust** for extreme performance.
+- **Packaging:** Uses **NAPI-RS** to provide native bindings for the Node.js ecosystem.
 - **License:** MIT
 
 ---
