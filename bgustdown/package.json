@@ -1,8 +1,11 @@
 {
   "name": "bgustdown",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "High-performance document-to-markdown converter in Rust with NAPI-RS bindings.",
   "main": "index.js",
+  "bin": {
+    "bgustdown": "cli.js"
+  },
   "types": "index.d.ts",
   "napi": {
     "name": "bgustdown",
