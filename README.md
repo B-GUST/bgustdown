@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/bgustdown"><img src="https://img.shields.io/npm/v/bgustdown.svg?style=flat-square" alt="NPM Version"></a>
   <a href="https://crates.io/crates/bgustdown"><img src="https://img.shields.io/crates/v/bgustdown.svg?style=flat-square" alt="Crates Version"></a>
-  <img src="https://img.shields.io/badge/version-0.1.3-orange.svg?style=flat-square" alt="Stable Version">
+  <img src="https://img.shields.io/badge/version-0.1.4-orange.svg?style=flat-square" alt="Stable Version">
   <a href="https://doi.org/10.5281/zenodo.20090926"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.20090926-blue.svg?style=flat-square" alt="DOI"></a>
 </p>
 
@@ -43,7 +43,7 @@ El proyecto ha consolidado su arquitectura monorrama en `main`, centralizando el
                                    │
       ┌────────────────────────────┼────────────────────────────┐
       ▼ (Librería Rust)            ▼ (Bindings Node/NAPI)       ▼ (Skill para Agentes)
- [ Canal Crates.io (v0.1.3) ]   [ Canal NPM / CLI (v0.1.2) ] [ Canal Skill de IA ]
+ [ Canal Crates.io (v0.1.4) ]   [ Canal NPM / CLI (v0.1.4) ] [ Canal Skill de IA ]
   - docs/crates/                 - docs/npm/                  - docs/skill/
   - Importable como rlib         - Binario cdylib (.node)     - install_skill.sh
 ```
@@ -53,17 +53,17 @@ El proyecto ha consolidado su arquitectura monorrama en `main`, centralizando el
 ## 📦 Canales de Distribución
 
 ### 1. Canal Rust (Crates.io) 🦀
-*   **Versión Activa:** `v0.1.3`
+*   **Versión Activa:** `v0.1.4`
 *   **Tipo de Biblioteca:** Estática (`rlib`).
 *   **Uso:** Añade `bgustdown` a tu proyecto Rust:
     ```toml
     [dependencies]
-    bgustdown = "0.1.3"
+    bgustdown = "0.1.4"
     ```
 *   Ver detalles de publicación en: [docs/crates/README.md](./docs/crates/README.md).
 
 ### 2. Canal Node.js & CLI (NPM) 🟢
-*   **Versión Activa:** `v0.1.2`
+*   **Versión Activa:** `v0.1.4`
 *   **Tipo de Biblioteca:** Dinámica (`cdylib` mediante NAPI-RS).
 *   **Instalación:**
     ```bash

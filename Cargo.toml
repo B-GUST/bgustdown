@@ -1,6 +1,6 @@
 [package]
 name = "bgustdown"
-version = "0.1.2"
+version = "0.1.4"
 edition = "2021"
 authors = ["B-GUST <augustbenitogroup@gmail.com>"]
 license = "MIT"
@@ -13,6 +13,8 @@ categories = ["text-processing", "parser-implementations"]
 
 [lib]
 crate-type = ["rlib", "cdylib"]
+
+[workspace]
 
 [dependencies]
 napi = { version = "2.12", features = ["async"] }

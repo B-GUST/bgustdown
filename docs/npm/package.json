@@ -1,6 +1,6 @@
 {
   "name": "bgustdown",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "High-performance document-to-markdown converter in Rust with NAPI-RS bindings.",
   "main": "index.js",
   "bin": {
@@ -30,8 +30,8 @@
   },
   "license": "MIT",
   "optionalDependencies": {
-    "bgustdown-win32-x64-msvc": "0.1.0",
-    "bgustdown-darwin-x64": "0.1.0",
-    "bgustdown-linux-x64-gnu": "0.1.0"
+    "bgustdown-win32-x64-msvc": "0.1.4",
+    "bgustdown-darwin-x64": "0.1.4",
+    "bgustdown-linux-x64-gnu": "0.1.4"
   }
 }
