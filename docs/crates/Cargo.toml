@@ -1,6 +1,6 @@
 [package]
 name = "bgustdown"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["B-GUST <augustbenitogroup@gmail.com>"]
 license = "MIT"
@@ -12,7 +12,9 @@ keywords = ["markdown", "nlp", "ocr", "arrow", "converter"]
 categories = ["text-processing", "parser-implementations"]
 
 [lib]
-crate-type = ["rlib", "cdylib"]
+crate-type = ["rlib"]
+
+[workspace]
 
 [dependencies]
 napi = { version = "2.12", features = ["async"] }
