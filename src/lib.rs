@@ -1,7 +1,7 @@
 use napi_derive::napi;
 use napi::{Error, Status, Result};
 mod converters;
-mod ocr;
+mod text_utils;
 
 use converters::docx::convert_docx;
 use converters::odt::convert_odt;
@@ -29,16 +29,13 @@ pub async fn convert_file(path: String) -> Result<String> {
 }
 
 #[napi]
-pub struct Bgustdown {
-    ocr_engine: ocr::OcrEngine,
-}
+pub struct Bgustdown {}
 
 #[napi]
 impl Bgustdown {
     #[napi(constructor)]
     pub fn new() -> Result<Self> {
-        let ocr_engine = ocr::OcrEngine::new().map_err(|e| Error::new(Status::GenericFailure, e))?;
-        Ok(Self { ocr_engine })
+        Ok(Self {})
     }
 
     #[napi]
@@ -51,7 +48,7 @@ impl Bgustdown {
     #[napi]
     pub fn prepare_training_data(&self, text: String, _source: String, _domain: String) -> Result<Vec<String>> {
         let cleaned = converters::dataset_builder::DatasetCleaner::clean(&text);
-        let sentences = self.ocr_engine.segment_sentences(&cleaned);
+        let sentences = text_utils::segment_sentences(&cleaned);
         Ok(sentences)
     }
 }
