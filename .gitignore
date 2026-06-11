@@ -30,3 +30,6 @@ bgustdown-zenodo.zip
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Ignore models binaries
+models/
