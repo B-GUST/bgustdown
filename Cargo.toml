@@ -1,6 +1,6 @@
 [package]
 name = "bgustdown"
-version = "0.1.4"
+version = "0.2.0"
 edition = "2021"
 authors = ["B-GUST <augustbenitogroup@gmail.com>"]
 license-file = "LICENSE"
@@ -32,7 +32,7 @@ arrow-schema = "58.3.0"
 arrow-cast = "58.3.0"
 chrono = "0.4.38"
 pdf-extract = "0.7"
-bgustreadimg = { path = "../bgustreadimg", version = "0.1.7", features = ["onnx"] }
+bgustreadimg = { path = "../bgustreadimg", version = "0.2.0", features = ["onnx"] }
 tokenizers = "0.21"
 image = "0.25"
 regex = "1.10"
