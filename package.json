@@ -28,7 +28,7 @@
   "engines": {
     "node": ">= 10"
   },
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "optionalDependencies": {
     "bgustdown-win32-x64-msvc": "0.1.4",
     "bgustdown-darwin-x64": "0.1.4",

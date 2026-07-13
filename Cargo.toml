@@ -3,7 +3,7 @@ name = "bgustdown"
 version = "0.1.4"
 edition = "2021"
 authors = ["B-GUST <augustbenitogroup@gmail.com>"]
-license = "MIT"
+license-file = "LICENSE"
 description = "High-performance document-to-markdown & NLP dataset engine in Rust with NAPI-RS bindings."
 repository = "https://github.com/B-GUST/bgustdown"
 homepage = "https://bgustdown.lat"
@@ -32,7 +32,7 @@ arrow-schema = "58.3.0"
 arrow-cast = "58.3.0"
 chrono = "0.4.38"
 pdf-extract = "0.7"
-bgustreadimg = { path = "../bgustreadimg" }
+bgustreadimg = { path = "../bgustreadimg", version = "0.1.7", features = ["onnx"] }
 tokenizers = "0.21"
 image = "0.25"
 regex = "1.10"
